@@ -477,6 +477,114 @@ img {
      object-fit: contain;
 }
 
+.pixels {
+  margin: 20px 0;
+}
+.pixels .container {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .pixels .container {
+    flex-direction: column;
+  }
+}
+.pixels__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #1e1e1e;
+}
+@media (max-width: 768px) {
+  .pixels__info {
+    flex: 0 1 auto;
+  }
+}
+.pixels__info-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 54px;
+  color: #00ff01;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .pixels__info-title {
+    font-size: 46px;
+  }
+}
+.pixels__info-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #00ff01;
+}
+@media (max-width: 576px) {
+  .pixels__info-text {
+    font-size: 20px;
+  }
+}
+.pixels__info-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pixels__info-link {
+  display: inline-block;
+  padding: 16px 80px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #00ff01;
+  border: 3px solid #00ff01;
+  transition: transform ease-in-out 0.2s;
+  will-change: transform;
+}
+@media (max-width: 576px) {
+  .pixels__info-link {
+    max-width: 360px;
+    width: 100%;
+    padding: 16px 20px;
+  }
+}
+.pixels__info-link:hover {
+  transform: scale(1.04);
+}
+.pixels__info-link:active {
+  transform: scale(1);
+}
+.pixels__logo {
+  flex: 0 0 calc(33.3333333333% - 13.3333333333px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #00ff01;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .pixels__logo {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .pixels__logo {
+    flex: 0 1 auto;
+  }
+}
+.pixels__logo-image {
+  display: block;
+}
+@media (max-width: 768px) {
+  .pixels__logo-image {
+    max-height: 330px;
+  }
+}
+
 .gallery .container {
   display: flex;
   gap: 20px;
