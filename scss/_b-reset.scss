@@ -1,8 +1,11 @@
-
+@font-face {
+  font-family: 'Pixelony';
+  src: url('../fonts/pixelony.regular.ttf') format('truetype');
+}
 
 html {
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Pixelony', sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -10,17 +13,19 @@ html {
 
 body {
   position: relative;
+  min-height: 100vh;
   margin: 0;
   overflow-y: scroll;
   color: $black;
-  background-color: $white;
+  background-image: linear-gradient(180deg, #01d1ff 0%, #018ccd 100%);
+  background-repeat: no-repeat;
 }
 
 a,
 button,
 input,
 textarea {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Pixelony', sans-serif;
   text-decoration: none;
 }
 
