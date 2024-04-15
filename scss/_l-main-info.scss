@@ -1,0 +1,148 @@
+.main-info {
+  margin: 0 0 20px;
+
+  & .container {
+    position: relative;
+    padding-left: 400px;
+
+    @include laptop {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__durov {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #fcbd15;
+
+    @include laptop {
+      position: static;
+      flex: 0 0 calc(50% - 10px);
+      max-width: none;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      padding: 20px;
+    }
+
+    &-image {
+      max-height: 100%;
+      height: auto;
+      object-fit: contain;
+
+      @include tablet {
+        max-height: 280px;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0 0 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    background: #3600a9;
+
+    @include laptop {
+      flex: 0 0 calc(50% - 10px);
+      margin: 0;
+      font-size: 20px;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      font-size: 20px;
+    }
+  }
+
+  &__token {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #ed1d26;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #fff;
+
+    @include laptop {
+      flex: 1 1 100%;
+      padding: 16px 20px;
+      font-size: 21px;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      justify-content: space-between;
+      max-width: 100%;
+      text-align: left;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    &-text {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-number {
+      max-width: calc(100% - 40px);
+      overflow-wrap: break-word;
+    }
+
+    &-button {
+      flex: 0 0 auto;
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      border: none;
+      background: url(../assets/copy-icon.svg) center no-repeat;
+      background-size: contain;
+      transition: transform ease-in-out 0.14s;
+      will-change: transform;
+      cursor: pointer;
+
+      @include laptop {
+        height: 32px;
+        width: 32px;
+      }
+
+      @include tablet {
+        height: 28px;
+        width: 28px;
+      }
+
+      &.active {
+        background-image: url(../assets/ok.svg);
+      }
+    }
+  }
+}
