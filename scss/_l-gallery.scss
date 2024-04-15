@@ -1,0 +1,29 @@
+.gallery {
+  & .container {
+    display: flex;
+    gap: 20px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__figure {
+    flex: 0 0 calc(50% - 10px);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    @include mobile {
+      flex: 0 1 auto;
+    }
+
+    &_satyr {
+      background-color: #fcbd15;
+    }
+
+    &_chill {
+      background-color: #ed1d26;
+    }
+  }
+}

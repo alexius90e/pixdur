@@ -281,6 +281,9 @@ img {
   background-image: url(../assets/ok.svg);
 }
 
+.token-info {
+  margin: 20px 0;
+}
 .token-info .container {
   display: flex;
   flex-wrap: wrap;
@@ -472,4 +475,31 @@ img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.gallery .container {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 576px) {
+  .gallery .container {
+    flex-direction: column;
+  }
+}
+.gallery__figure {
+  flex: 0 0 calc(50% - 10px);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+@media (max-width: 576px) {
+  .gallery__figure {
+    flex: 0 1 auto;
+  }
+}
+.gallery__figure_satyr {
+  background-color: #fcbd15;
+}
+.gallery__figure_chill {
+  background-color: #ed1d26;
 }
